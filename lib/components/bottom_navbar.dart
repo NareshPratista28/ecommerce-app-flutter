@@ -7,22 +7,20 @@ class MyBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
-        child: GNav(
-          mainAxisAlignment: MainAxisAlignment.center,
-          color: Colors.grey[400],
-          activeColor: Colors.grey.shade700,
-          tabActiveBorder: Border.all(color: Colors.white),
-          tabBackgroundColor: Colors.grey.shade300,
-          tabBorderRadius: 16,
-          onTabChange: (value) => onTabChange!(value),
-          tabs: const [
-            GButton(icon: Icons.home, text: 'Shop'),
-            GButton(icon: Icons.shopping_bag_rounded, text: 'Cart'),
-          ],
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: GNav(
+        mainAxisAlignment: MainAxisAlignment.center,
+        color: Colors.grey[400],
+        activeColor: Colors.grey.shade700,
+        tabActiveBorder: Border.all(color: Colors.white),
+        tabBackgroundColor: Colors.grey.shade300,
+        tabBorderRadius: 16,
+        onTabChange: (value) => onTabChange!(value),
+        tabs: const [
+          GButton(icon: Icons.home, text: 'Shop'),
+          GButton(icon: Icons.shopping_bag_rounded, text: 'Cart'),
+        ],
       ),
     );
   }
